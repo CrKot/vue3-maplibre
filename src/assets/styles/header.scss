@@ -1,0 +1,10 @@
+@import './_variable.scss';
+
+.header {
+  height: 32px;
+  background: $customGray;
+
+  @media (min-width: $xs) {
+    height: 60px;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../_variable.scss';
+@import '../mixins/index.scss';
+
+.map-btn {
+  background: radial-gradient($customGray, transparent);
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  min-width: 170px;
+  margin: 0 auto;
+
+  @include medium-transition(background);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $customHover;
+    }
+  }
+
+  @media (min-width: $xs) {
+    padding: 16px;
+  }
+
+  @media (min-width: $sm) {
+    margin: 0;
+  }
+
+  &:active {
+    background-color: $customActiveButton;
+  }
+
+  &._selected {
+    background: rgb(168 31 31 / 0.75);
+  }
+}

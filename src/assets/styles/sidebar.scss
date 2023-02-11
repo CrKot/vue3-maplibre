@@ -1,0 +1,35 @@
+@import './_variable.scss';
+
+.sidebar {
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  gap: 12px;
+  padding: 8px 8px 40px;
+  height: 100%;
+
+  @media (min-width: $sm) {
+    flex-direction: column;
+    overflow-x: unset;
+    gap: 16px;
+    padding: 24px;
+    flex-shrink: 0;
+    width: 260px;
+    float: right;
+  }
+
+  &__countBlock {
+    position: fixed;
+    top: 82px;
+    width: 100vw;
+
+    @media (min-width: $xs) {
+      top: 124px;
+    }
+
+    @media (min-width: $sm) {
+      position: static;
+      width: auto;
+    }
+  }
+}
